@@ -1,0 +1,39 @@
+<html>
+  
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+</head>
+
+<body>
+  <script>
+    bImage = loadImage('P5Demo.jpeg');
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+function setup() {
+  createCanvas(w, h, WEBGL);
+}
+
+function draw() {
+  clear();
+  background(bImage);
+  noStroke();
+  rotateY(mouseX/100);
+  rotateX(mouseY/100);
+  fill('blue')
+  rect(199,117, mouseX,mouseY);
+  fill('green')
+  rect(133,173, mouseX,mouseY);
+  fill('orange')
+  rect(118,137, mouseX,mouseY);
+  fill('black')
+  rect(198,167, mouseX,mouseY);
+}
+</script>
+</body>
+</html>
